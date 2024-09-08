@@ -24,6 +24,8 @@ hr {
     /* Responsif dengan vw (viewport width) */
     font-weight: bold;
     letter-spacing: 2px;
+    justify-content: center;
+    text-align: center;
 }
 
 p {
@@ -32,10 +34,14 @@ p {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(var(--width), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 5px;
-    width: fit-content;
+    width: 100%;
+    max-width: 600px;
+    /* Batas maksimal lebar board */
     margin: 10px auto;
+    padding: 10px;
+    justify-content: center;
 }
 
 .tile {
@@ -73,23 +79,31 @@ p {
 }
 
 .keyboard-row {
-    width: 80%;
-    /* Lebar keyboard menyesuaikan */
-    max-width: 400px;
+    width: 90%;
+    /* Lebar keyboard menyesuaikan layar */
+    max-width: 600px;
+    /* Batas maksimal lebar keyboard */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
+    /* Tambahkan gap antar tombol */
 }
 
 .key-tile {
-    /* Responsif, berdasarkan viewport width */
+    flex: 1 1 minmax(40px, 10vw);
+    /* Responsive dengan minimal 40px dan maksimal 10vw */
     height: 10vw;
-    border-radius: 2px;
-    margin: 1px;
+    /* Ukuran disesuaikan dengan lebar viewport */
+    max-width: 60px;
+    /* Maksimal lebar 60px untuk layar besar */
+    border-radius: 4px;
+    margin: 2px;
     border: 1px solid gray;
     background-color: rgb(233, 233, 233);
-    font-size: 4vw;
+    font-size: 3.5vw;
+    /* Ukuran font responsif */
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -97,12 +111,13 @@ p {
 }
 
 .enter-key-tile {
-    width: 20vw;
-    /* Responsif, lebih lebar */
+    flex: 2 1 minmax(80px, 20vw);
+    /* Tombol enter lebih lebar */
     height: 10vw;
-    margin: 1px;
+    max-width: 120px;
+    margin: 2px;
     border: 1px solid lightgray;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -127,6 +142,53 @@ p {
 
     .key-tile {
         width: 36px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .enter-key-tile {
+        width: 76px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    }
+
+    .tile {
+        height: 8vw;
+        width: 8vw;
+        font-size: 3vw;
+    }
+
+    .key-tile {
+        height: 8vw;
+        font-size: 3vw;
+    }
+
+    .enter-key-tile {
+        width: 18vw;
+        height: 8vw;
+        font-size: 3vw;
+    }
+}
+
+/* Media query untuk layar besar (desktop) */
+@media (min-width: 768px) {
+    #board {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    .tile {
+        height: 60px;
+        width: 60px;
+        font-size: 36px;
+    }
+
+    .key-tile {
         height: 40px;
         font-size: 20px;
     }

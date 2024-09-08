@@ -6,7 +6,7 @@ var col = 0; // Current letter for that attempt
 
 var gameOver = false;
 var wordList = [
-    "jakarta", "bandung", "surabaya", "semarang", "yogyakarta", "malang",
+    "jakarta", "bandung", "surabaya", "semarang", "yogyakarta", "malang", "tangerang", "bekasi", "depok", "bogor", "cirebon", "solo", "tegal", "kediri", "serang"
 ];
 
 var guessList = wordList.concat(wordList);
@@ -40,40 +40,40 @@ var explanations = {
         imageUrl: "image/malang.jpeg"
     },
     "TANGERANG": {
-        text: "Kota di Provinsi Banten, bagian dari wilayah metropolitan Jabodetabek.",
-        imageUrl: "image/tangerang.jpg"
+        text: "Kota Tangerang adalah kota yang terletak di Provinsi Banten, Indonesia. Kota ini terletak tepat di sebelah barat DKI Jakarta. Penduduk pribuminya adalah Suku Sunda. Pada pertengahan tahun 2024, jumlah penduduk kota Tangerang sebanyak 1.927.815 dengan kepadatan 12.000 jiwa/km2.<br>Tangerang merupakan kota terbesar di Provinsi Banten, serta ketiga terbesar di kawasan metropolitan Jakarta Raya setelah Kota Bekasi dan Kota Depok. Selain itu, kepolisian di kota ini juga setara dengan wilayah kota penyangga Jakarta lainnya seperti, Kota Depok, Kota Tangerang Selatan dan Kota Bekasi, yang di mana kepolisiannya berkedudukan di wilayah hukum Polda Metro Jaya dan wilayah pertahanan Kodam Jaya.",
+        imageUrl: "image/tanggerang.jpeg"
     },
     "BEKASI": {
-        text: "Kota di Jawa Barat yang merupakan pusat industri dan pendukung Jakarta.",
-        imageUrl: "image/bekasi.jpg"
+        text: "Kota Bekasi adalah salah satu kota di Provinsi Jawa Barat, Indonesia. Kota ini berbatasan langsung dengan DKI Jakarta dari arah barat. Pada pertengahan tahun 2024, jumlah penduduk Kota Bekasi berjumlah 2.526.133 jiwa. Meskipun berstatus kota penyangga, kota ini merupakan kota terbesar di Provinsi Jawa Barat menurut jumlah penduduk. <br>Kota Bekasi merupakan bagian dari kawasan metropolitan Jakarta Raya dan menjadi kota penyangga dengan jumlah penduduk terbanyak se-Indonesia. Saat ini Kota Bekasi berkembang menjadi tempat tinggal kaum urban dan sentra industry.Kota di Jawa Barat yang merupakan pusat industri dan pendukung Jakarta.",
+        imageUrl: "image/bekasi.jpeg"
     },
     "DEPOK": {
-        text: "Kota di Provinsi Jawa Barat, terletak antara Jakarta dan Bogor.",
-        imageUrl: "image/depok.jpg"
+        text: "Kota Depok adalah sebuah kota yang terletak di Provinsi Jawa Barat, Indonesia. Kota Depok merupakan bagian dari kawasan metropolitan Jabodetabekpunjur dan berada di bagian selatan Daerah Khusus Ibukota Jakarta. Kota Depok dibentuk dari wilayah Kota Administratif Depok dengan penambahan wilayah dari Kecamatan Limo, Kecamatan Cimanggis, dan Kecamatan Sawangan, serta sebagian desa dari Kecamatan Bojonggede yang digabungkan dengan Kecamatan Pancoran Mas. Tanggal peresmian Kota Depok ditetapkan sebagai Hari Jadi Kota Depok. Jumlah penduduk kota Depok berdasarkan data Kementerian Dalam Negeri Republik Indonesia pada pertengahan tahun 2023 sebanyak 1.927.867 jiwa.",
+        imageUrl: "image/depok.jpeg"
     },
     "BOGOR": {
-        text: "Kota di Jawa Barat, terkenal dengan Istana Bogor dan Kebun Raya Bogor.",
-        imageUrl: "image/bogor.jpg"
+        text: "Kota Bogor adalah sebuah kota yang terletak di Provinsi Jawa Barat, Indonesia. Kota ini terletak 59 km di sebelah selatan Jakarta, dan merupakan enklave Kabupaten Bogor. Pada akhir tahun 2024, jumlah penduduk Kota Bogor sebanyak 1.137,859 jiwa, dengan kepadatan 10.208 jiwa/km².<br>Kota Bogor dikenal dengan julukan Kota Hujan, karena memiliki curah hujan yang lumayan sangat tinggi. Kota Bogor terdiri atas 6 kecamatan yang dibagi lagi atas sejumlah 68 kelurahan. Pada masa Kolonial Hindia Belanda, Kota Bogor dikenal dengan nama Buitenzorg yang berarti tanpa kecemasan atau aman tentram.",
+        imageUrl: "image/bogor.jpeg"
     },
     "CIREBON": {
-        text: "Kota di pesisir utara Jawa Barat, terkenal dengan sejarah dan budaya pesisir.",
-        imageUrl: "image/cirebon.jpg"
+        text: "Kota Cirebon adalah salah satu kota yang berada di provinsi Jawa Barat, Indonesia. Kota ini berada di pesisir utara Pulau Jawa yang menghubungkan Jakarta dengan Surabaya di lintas utara dan tengah Jawa. Pada pertengahan tahun 2023, jumlah penduduk kota Cirebon sebanyak 348.912 jiwa, dengan kepadatan 9.194 jiwa/km2.<br>Pada awalnya Cirebon berasal dari kata sarumban,[6] Cirebon adalah sebuah dukuh kecil yang dibangun oleh Ki Gedeng Tapa. Lama-kelamaan Cirebon berkembang menjadi sebuah desa yang ramai yang kemudian diberi nama Caruban[7] (carub dalam bahasa Jawa artinya bersatu padu). Diberi nama demikian karena di sana bercampur para pendatang dari beraneka bangsa di antaranya Jawa, Sunda, Tionghoa, dan unsur-unsur budaya bangsa Arab), agama, bahasa, dan adat istiadat. kemudian pelafalan kata caruban berubah lagi menjadi carbon dan kemudian cirebon.<br><br>Selain karena faktor penamaan tempat penyebutan kata cirebon juga dikarenakan sejak awal mata pencaharian sebagian besar masyarakat adalah nelayan, maka berkembanglah pekerjaan menangkap ikan dan rebon (udang kecil) di sepanjang pantai, serta pembuatan terasi, petis dan garam. Dari istilah air bekas pembuatan terasi yang terbuat dari sisa pengolahan udang rebon inilah berkembang sebutan cai-rebon (bahasa Sunda: air rebon), yang kemudian menjadi cirebon.[8]",
+        imageUrl: "image/cirebon.jpeg"
     },
     "SOLO": {
-        text: "Kota di Jawa Tengah, juga dikenal sebagai Surakarta, pusat budaya Jawa.",
-        imageUrl: "image/solo.jpg"
+        text: "Kota Surakarta adalah salah satu kota di provinsi Jawa Tengah, Indonesia, dengan luas 44,04 km2. Pada 2020, penduduk Surakarta sebanyak 522.364 jiwa, dengan kepadatan sebanyak 11.861 jiwa/km2, dan pada akhir tahun 2023, jumlah penduduk Surakarta sebanyak 587.646 jiwa.<br><br>Kota ini merupakan kota terbesar ketiga di pulau Jawa bagian selatan setelah Kota Malang, Jawa Timur dan Kota Bandung, Jawa Barat menurut jumlah penduduk. Sisi Timur kota ini dilewati sungai yang terabadikan dalam salah satu lagu keroncong, Bengawan Solo. Kota ini termasuk dalam kawasan Solo Raya, sebagai kota utama.<br><br>Bersama dengan Yogyakarta, Surakarta merupakan pewaris Kerajaan Mataram Islam yang dipecah melalui Perjanjian Giyanti, pada tahun 1755, sehingga Surakarta menjadi kediaman Susuhunan Pakubuwana dan Adipati Mangkunegara.",
+        imageUrl: "image/solo.jpeg"
     },
     "TEGAL": {
-        text: "Kota di pesisir utara Jawa Tengah, terkenal dengan warung tegal dan industrinya.",
-        imageUrl: "image/tegal.jpg"
+        text: "Kota Tegal adalah sebuah satu kota di Provinsi Jawa Tengah, Indonesia. Kota ini pernah menjadi cikal-bakal berdirinya Korps Marinir seperti tercatat dalam Pangkalan IV ALRI Tegal dengan nama Corps Mariniers, pada 15 November 1945. Kota Tegal berbatasan dengan Kabupaten Brebes di sebelah barat, Laut Jawa di sebelah utara, serta Kabupaten Tegal di sebelah selatan dan timur. Hari jadi Kota Tegal adalah 12 April 1580.",
+        imageUrl: "image/tegal.jpeg"
     },
     "KEDIRI": {
-        text: "Kota di Jawa Timur, pusat industri rokok dan gula.",
-        imageUrl: "image/kediri.jpg"
+        text: "Kota Kediri adalah sebuah kota yang berada di provinsi Jawa Timur, Indonesia. Kota ini terletak sekitar 130 km sebelah Barat Daya Kota Surabaya dan merupakan kota terbesar ketiga di provinsi Jawa Timur setelah Kota Surabaya dan Kota Malang menurut jumlah penduduk. Kota Kediri merupakan kota tertua yang ada di Jawa Timur. Kota Kediri memiliki luas wilayah 63,40 km² . dan seluruh wilayahnya merupakan enklave dari Kabupaten Kediri. Kota Kediri terbelah oleh Sungai Brantas yang membujur dari Selatan ke Utara sepanjang 7 kilometer. Penduduk kota ini berjumlah 289.418 jiwa, berdasarkan data Badan Pusat Statistik Kota Kediri tahun 2023.<br><br>Kediri dikenal merupakan salah satu pusat produksi gula dan industri rokok terbesar di Indonesia. Perusahaan rokok Gudang Garam berpusat di kota ini.",
+        imageUrl: "image/kediri.jpeg"
     },
     "SERANG": {
-        text: "Ibukota Provinsi Banten, kota yang merupakan pusat pemerintahan dan ekonomi di Banten.",
-        imageUrl: "image/serang.jpg"
+        text: "Kota Serang merupakan salah satu kota dan sekaligus menjadi ibu kota provinsi di Provinsi Banten, Indonesia. Kota ini berada di bagian barat laut Provinsi Banten, serta dikelilingi oleh Kabupaten Serang di sebelah selatan, barat, dan timur, dan Laut Jawa di sebelah utara. Kota Serang dilintasi Jalan Tol Jakarta–Merak dan juga dilintasi oleh Jalur kereta api Merak–Tanah Abang. Kota ini berada di wilayah metropolitan Serang Raya.<br><br>Kota Serang adalah kota yang berperan sebagai pusat budaya Sunda Banten dan Jawa Serang, serta penduduknya menuturkan Bahasa Sunda Banten dan juga Bahasa Jawa Serang. Di Kota ini terdapat sisa-sisa bangunan bersejarah masa kejayaan Kesultanan Banten. Pada pertengahan tahun 2023, jumlah penduduk Kota Serang sebanyak 735.651 jiwa, dengan kepadatan 2.700 jiwa/km2.",
+        imageUrl: "image/serang.jpeg"
     }
 };
 
