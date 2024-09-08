@@ -1,16 +1,33 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #d8e1f1, #cbe8df, #eadee0, #d8e1f1);
+    /* Warna pastel */
+    min-height: 100vh;
+    /* Pastikan background menutupi seluruh layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+
 hr {
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 #title {
-    font-size: 36px;
+    font-size: 6vw;
+    /* Responsif dengan vw (viewport width) */
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+p {
+    font-size: 4vw;
 }
 
 #board {
@@ -18,19 +35,22 @@ hr {
     grid-template-columns: repeat(var(--width), 1fr);
     gap: 5px;
     width: fit-content;
-    /* Sesuaikan dengan lebar yang diinginkan */
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .tile {
-    border: 2px solid lightgray;
+    border: 2px solid burlywood;
+    background-color: rgb(233, 233, 233);
     border-radius: 8px;
-    height: 60px;
-    /* Sesuaikan dengan tinggi yang diinginkan */
+    height: 10vw;
+    /* Responsif, berdasarkan lebar viewport */
+    width: 10vw;
+    /* Tile width responsif */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 4vw;
+    /* Responsif */
     font-weight: bold;
 }
 
@@ -53,7 +73,9 @@ hr {
 }
 
 .keyboard-row {
-    width: 400px;
+    width: 80%;
+    /* Lebar keyboard menyesuaikan */
+    max-width: 400px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -61,13 +83,13 @@ hr {
 }
 
 .key-tile {
-    width: 36px;
-    height: 40px;
+    /* Responsif, berdasarkan viewport width */
+    height: 10vw;
+    border-radius: 2px;
     margin: 1px;
-    border: 1px solid lightgray;
-
-    /* Text */
-    font-size: 20px;
+    border: 1px solid gray;
+    background-color: rgb(233, 233, 233);
+    font-size: 4vw;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -75,15 +97,43 @@ hr {
 }
 
 .enter-key-tile {
-    width: 76px;
-    height: 40px;
+    width: 20vw;
+    /* Responsif, lebih lebar */
+    height: 10vw;
     margin: 1px;
     border: 1px solid lightgray;
-
-    /* Text */
-    font-size: 20px;
+    font-size: 4vw;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media query untuk layar lebih besar */
+@media (min-width: 768px) {
+    #title {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .tile {
+        height: 60px;
+        width: 60px;
+        font-size: 36px;
+    }
+
+    .key-tile {
+        width: 36px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .enter-key-tile {
+        width: 76px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
